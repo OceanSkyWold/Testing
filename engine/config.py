@@ -7,9 +7,9 @@ from pathlib import Path
 
 # ── Paths ──
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-SITE_DIR = PROJECT_ROOT / "site"
+SITE_DIR = PROJECT_ROOT / "docs"
 DATA_DIR = PROJECT_ROOT / "data"
-TEMPLATE_DIR = SITE_DIR  # Templates live in site/
+TEMPLATE_DIR = PROJECT_ROOT / "site"  # Source templates stay in site/
 ARTICLES_DIR = SITE_DIR / "articles"
 
 # ── Ollama ──
