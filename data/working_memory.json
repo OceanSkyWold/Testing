@@ -6,20 +6,9 @@
         "wikipedia",
         "reddit"
       ],
-      "combined_score": 0.75,
+      "combined_score": 0.751,
       "suggested_category": "news",
-      "discovered_at": "2026-03-25T13:50:45.175345",
-      "signal_count": 2
-    },
-    {
-      "topic": "[Schultz] FA WR Odell Beckham Jr. has received renewed interest in recent days after his showing at Tom Brady\u2019s Fanatics flag football game. OBJ was one of the most impressive players on the field and fully intends to play in 2026, per sources.",
-      "platforms": [
-        "wikipedia",
-        "reddit"
-      ],
-      "combined_score": 0.681,
-      "suggested_category": "sports",
-      "discovered_at": "2026-03-25T13:50:45.175305",
+      "discovered_at": "2026-03-25T15:28:37.607058",
       "signal_count": 2
     },
     {
@@ -28,10 +17,21 @@
         "wikipedia",
         "hackernews"
       ],
-      "combined_score": 0.658,
+      "combined_score": 0.712,
       "suggested_category": "tech",
-      "discovered_at": "2026-03-25T13:50:45.175351",
+      "discovered_at": "2026-03-25T15:28:37.607064",
       "signal_count": 3
+    },
+    {
+      "topic": "'We negotiate with bombs': US secretary of war Pete Hegseth's warning to Iran as Trump talks peace",
+      "platforms": [
+        "wikipedia",
+        "reddit"
+      ],
+      "combined_score": 0.708,
+      "suggested_category": "news",
+      "discovered_at": "2026-03-25T15:28:37.607051",
+      "signal_count": 2
     },
     {
       "topic": "Real Madrid\u2019s ex nutrition specialist Itziar Gonz\u00e1lez suggests the club\u2019s medical team rely on Chat-GPT when deciding player supplements. \"Although I don't know what's worse: this, or them prescribing supplements based on free Chat-GPT.\"",
@@ -39,23 +39,34 @@
         "wikipedia",
         "reddit"
       ],
-      "combined_score": 0.656,
+      "combined_score": 0.663,
       "suggested_category": "sports",
-      "discovered_at": "2026-03-25T13:50:45.175327",
+      "discovered_at": "2026-03-25T15:28:37.607032",
       "signal_count": 2
     },
     {
-      "topic": "[Delaney, Independent] Liverpool have no current plans to move on Arne Slot in the summer, with the hierarchy believing there are numerous mitigating factors for a disappointing campaign + The Saudi Pro League are targeting both Michael Edwards and Richard Hughes from Liverpool this summer.",
+      "topic": "Xabi Alonso is expected to arrive in the summer. Michael Edwards has kept the line open ever since. Even during the successful 2024/25 season under Slot, who had taken over from J\u00fcrgen Klopp. Alonso\u2019s agent, I\u00f1aki Ib\u00e1\u00f1ez recently confirmed concrete enquiries. [Axel Hesse, \nBILD]",
       "platforms": [
         "wikipedia",
         "reddit"
       ],
-      "combined_score": 0.616,
+      "combined_score": 0.626,
       "suggested_category": "sports",
-      "discovered_at": "2026-03-25T13:50:45.175336",
+      "discovered_at": "2026-03-25T15:28:37.607006",
+      "signal_count": 2
+    },
+    {
+      "topic": "Best Multicooker to Buy in 2026? (Price, Features)",
+      "platforms": [
+        "wikipedia",
+        "reddit"
+      ],
+      "combined_score": 0.536,
+      "suggested_category": "products",
+      "discovered_at": "2026-03-25T15:28:37.607043",
       "signal_count": 2
     }
   ],
   "drafts": [],
-  "updated_at": "2026-03-25T13:50:45.215608"
+  "updated_at": "2026-03-25T15:28:37.646801"
 }
