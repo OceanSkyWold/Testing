@@ -68,7 +68,8 @@ def publish(message: str | None = None, dry_run: bool = False) -> bool:
     if not message:
         message = f"Auto-publish: {datetime.utcnow().strftime('%Y-%m-%d %H:%M')} UTC"
 
-    # Stage all changes in site/ and data/
+    # Stage all changes in docs/, site/, and data/
+    _run_git("add", "docs/")
     _run_git("add", "site/")
     _run_git("add", "data/")
 
