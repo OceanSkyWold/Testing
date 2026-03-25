@@ -1,47 +1,25 @@
 {
   "trends": [
     {
-      "topic": "TIL When Vince McMahon was in charge of the WWE, the word 'wrestling' and other variations of it were banned. Wrestlers weren't allowed to say these words on TV.",
-      "platforms": [
-        "wikipedia",
-        "reddit"
-      ],
-      "combined_score": 0.751,
-      "suggested_category": "news",
-      "discovered_at": "2026-03-25T15:28:37.607058",
-      "signal_count": 2
-    },
-    {
       "topic": "My Astrophotography in the Movie Project Hail Mary",
       "platforms": [
         "wikipedia",
         "hackernews"
       ],
-      "combined_score": 0.712,
+      "combined_score": 0.738,
       "suggested_category": "tech",
-      "discovered_at": "2026-03-25T15:28:37.607064",
+      "discovered_at": "2026-03-25T17:37:02.431532",
       "signal_count": 3
     },
     {
-      "topic": "'We negotiate with bombs': US secretary of war Pete Hegseth's warning to Iran as Trump talks peace",
+      "topic": "Iran rejects US peace plan as 'excessive' and issues five conditions to end war, state media reports",
       "platforms": [
         "wikipedia",
         "reddit"
       ],
-      "combined_score": 0.708,
+      "combined_score": 0.726,
       "suggested_category": "news",
-      "discovered_at": "2026-03-25T15:28:37.607051",
-      "signal_count": 2
-    },
-    {
-      "topic": "Real Madrid\u2019s ex nutrition specialist Itziar Gonz\u00e1lez suggests the club\u2019s medical team rely on Chat-GPT when deciding player supplements. \"Although I don't know what's worse: this, or them prescribing supplements based on free Chat-GPT.\"",
-      "platforms": [
-        "wikipedia",
-        "reddit"
-      ],
-      "combined_score": 0.663,
-      "suggested_category": "sports",
-      "discovered_at": "2026-03-25T15:28:37.607032",
+      "discovered_at": "2026-03-25T17:37:02.431520",
       "signal_count": 2
     },
     {
@@ -50,23 +28,23 @@
         "wikipedia",
         "reddit"
       ],
-      "combined_score": 0.626,
+      "combined_score": 0.669,
       "suggested_category": "sports",
-      "discovered_at": "2026-03-25T15:28:37.607006",
+      "discovered_at": "2026-03-25T17:37:02.431480",
       "signal_count": 2
     },
     {
-      "topic": "Best Multicooker to Buy in 2026? (Price, Features)",
+      "topic": "Real Madrid\u2019s ex nutrition specialist Itziar Gonz\u00e1lez suggests the club\u2019s medical team rely on Chat-GPT when deciding player supplements. \"Although I don't know what's worse: this, or them prescribing supplements based on free Chat-GPT.\"",
       "platforms": [
         "wikipedia",
         "reddit"
       ],
-      "combined_score": 0.536,
-      "suggested_category": "products",
-      "discovered_at": "2026-03-25T15:28:37.607043",
+      "combined_score": 0.668,
+      "suggested_category": "sports",
+      "discovered_at": "2026-03-25T17:37:02.431508",
       "signal_count": 2
     }
   ],
   "drafts": [],
-  "updated_at": "2026-03-25T15:28:37.646801"
+  "updated_at": "2026-03-25T17:37:02.470540"
 }
