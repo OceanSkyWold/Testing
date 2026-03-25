@@ -11,7 +11,7 @@ from pathlib import Path
 
 from engine.config import (
     SITE_DIR, TEMPLATE_DIR, ARTICLES_DIR, DATA_DIR,
-    GA4_MEASUREMENT_ID, SITE_NAME, SITE_URL, CATEGORIES
+    GA4_MEASUREMENT_ID, SITE_NAME, SITE_URL, BASE_PATH, CATEGORIES
 )
 
 logger = logging.getLogger(__name__)
@@ -26,6 +26,23 @@ def _read_template(name: str) -> str:
 def _escape(text: str) -> str:
     """Escape text for safe HTML attribute insertion."""
     return html.escape(text, quote=True)
+
+
+def _fix_paths(html_str: str) -> str:
+    """Replace absolute paths with BASE_PATH-prefixed paths for GitHub Pages."""
+    # Fix nav/footer links: href="/" → href="/Testing/"
+    html_str = re.sub(r'href="/"', f'href="{BASE_PATH}/"', html_str)
+    # Fix category links: href="/category-*.html"
+    html_str = re.sub(r'href="/category-', f'href="{BASE_PATH}/category-', html_str)
+    # Fix article links: href="/articles/
+    html_str = re.sub(r'href="/articles/', f'href="{BASE_PATH}/articles/', html_str)
+    # Fix asset links: href="/css/ and src="/js/
+    html_str = re.sub(r'href="/css/', f'href="{BASE_PATH}/css/', html_str)
+    html_str = re.sub(r'src="/js/', f'src="{BASE_PATH}/js/', html_str)
+    # Fix legal links
+    html_str = re.sub(r'href="/(privacy|terms|disclosure)\.html"',
+                      rf'href="{BASE_PATH}/\1.html"', html_str)
+    return html_str
 
 
 def build_article_page(article: dict) -> str:
@@ -54,6 +71,7 @@ def build_article_page(article: dict) -> str:
         "{{TITLE}}": _escape(article["title"]),
         "{{META_DESCRIPTION}}": _escape(article.get("meta_description", "")),
         "{{CANONICAL_URL}}": f"{SITE_URL}/articles/{article['slug']}.html",
+        "{{BASE_PATH}}": BASE_PATH,
         "{{OG_IMAGE}}": "",  # Generated articles won't have images initially
         "{{PUBLISHED_ISO}}": published_iso,
         "{{PUBLISHED_HUMAN}}": published_human,
@@ -72,6 +90,7 @@ def build_article_page(article: dict) -> str:
     for key, val in replacements.items():
         page = page.replace(key, val)
 
+    page = _fix_paths(page)
     return page
 
 
@@ -82,7 +101,7 @@ def _build_related_placeholder() -> str:
 
 def _build_trending_placeholder() -> str:
     """Build placeholder for trending sidebar."""
-    return "<li><a href='/'>More trending articles coming soon</a></li>"
+    return f"<li><a href='{BASE_PATH}/'>More trending articles coming soon</a></li>"
 
 
 def save_article_page(article: dict, page_html: str):
@@ -138,7 +157,7 @@ def update_index(articles: list[dict]):
             flags=re.DOTALL,
         )
 
-    index_path.write_text(index_html, encoding="utf-8")
+    index_path.write_text(_fix_paths(index_html), encoding="utf-8")
     logger.info("Updated index.html with %d articles", len(articles))
 
 
@@ -151,7 +170,7 @@ def _build_featured_card(article: dict) -> str:
       <div class="featured-article__body">
         <span class="article-card__category">{_escape(article['category'].title())}</span>
         <h2 class="featured-article__title">
-          <a href="/articles/{article['slug']}.html">{_escape(article['title'])}</a>
+          <a href="{BASE_PATH}/articles/{article['slug']}.html">{_escape(article['title'])}</a>
         </h2>
         <p class="featured-article__excerpt">{_escape(article.get('meta_description', ''))}</p>
         <div class="article-card__meta">
@@ -173,7 +192,7 @@ def _build_article_card(article: dict) -> str:
           <img class="article-card__image" src="https://placehold.co/600x338?text={_escape(article['category'].title())}" alt="{_escape(article['title'])}" loading="lazy" width="600" height="338">
           <div class="article-card__body">
             <span class="article-card__category">{_escape(article['category'].title())}</span>
-            <h3 class="article-card__title"><a href="/articles/{article['slug']}.html">{_escape(article['title'])}</a></h3>
+            <h3 class="article-card__title"><a href="{BASE_PATH}/articles/{article['slug']}.html">{_escape(article['title'])}</a></h3>
             <p class="article-card__excerpt">{_escape(excerpt)}</p>
             <div class="article-card__meta">
               <time datetime="{dt.strftime('%Y-%m-%d')}">{dt.strftime('%b %d, %Y')}</time>
@@ -222,6 +241,7 @@ def build_category_pages(articles: list[dict]):
         page = page.replace("{{ARTICLE_CARDS}}", cards)
         page = page.replace("G-XXXXXXXXXX", GA4_MEASUREMENT_ID)
 
+        page = _fix_paths(page)
         filepath = SITE_DIR / f"category-{cat}.html"
         filepath.write_text(page, encoding="utf-8")
         logger.info("Updated category page: %s", filepath)

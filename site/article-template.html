@@ -60,7 +60,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="{{BASE_PATH}}/css/style.css">
   <link rel="canonical" href="{{CANONICAL_URL}}">
 
   <!-- GA4 -->
@@ -77,24 +77,24 @@
 
     <!-- Header -->
     <header class="site-header">
-      <a href="/" class="site-logo">TrendPulse</a>
+      <a href="{{BASE_PATH}}/" class="site-logo">TrendPulse</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       <nav>
         <ul class="site-nav" role="navigation">
-          <li><a href="/">Home</a></li>
-          <li><a href="/category-sports.html">Sports</a></li>
-          <li><a href="/category-tech.html">Tech</a></li>
-          <li><a href="/category-products.html">Products</a></li>
-          <li><a href="/category-news.html">News</a></li>
+          <li><a href="{{BASE_PATH}}/">Home</a></li>
+          <li><a href="{{BASE_PATH}}/category-sports.html">Sports</a></li>
+          <li><a href="{{BASE_PATH}}/category-tech.html">Tech</a></li>
+          <li><a href="{{BASE_PATH}}/category-products.html">Products</a></li>
+          <li><a href="{{BASE_PATH}}/category-news.html">News</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- Breadcrumbs -->
     <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a>
+      <a href="{{BASE_PATH}}/">Home</a>
       <span>›</span>
-      <a href="/category-{{CATEGORY_SLUG}}.html">{{CATEGORY}}</a>
+      <a href="{{BASE_PATH}}/category-{{CATEGORY_SLUG}}.html">{{CATEGORY}}</a>
       <span>›</span>
       <span>{{TITLE_SHORT}}</span>
     </nav>
@@ -181,18 +181,18 @@
         <div class="footer-section">
           <h4>Categories</h4>
           <ul>
-            <li><a href="/category-sports.html">Sports</a></li>
-            <li><a href="/category-tech.html">Tech</a></li>
-            <li><a href="/category-products.html">Products</a></li>
-            <li><a href="/category-news.html">News</a></li>
+            <li><a href="{{BASE_PATH}}/category-sports.html">Sports</a></li>
+            <li><a href="{{BASE_PATH}}/category-tech.html">Tech</a></li>
+            <li><a href="{{BASE_PATH}}/category-products.html">Products</a></li>
+            <li><a href="{{BASE_PATH}}/category-news.html">News</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h4>Legal</h4>
           <ul>
-            <li><a href="/privacy.html">Privacy Policy</a></li>
-            <li><a href="/terms.html">Terms of Use</a></li>
-            <li><a href="/disclosure.html">Affiliate Disclosure</a></li>
+            <li><a href="{{BASE_PATH}}/privacy.html">Privacy Policy</a></li>
+            <li><a href="{{BASE_PATH}}/terms.html">Terms of Use</a></li>
+            <li><a href="{{BASE_PATH}}/disclosure.html">Affiliate Disclosure</a></li>
           </ul>
         </div>
       </div>
@@ -204,6 +204,6 @@
 
   </div>
 
-  <script src="/js/main.js"></script>
+  <script src="{{BASE_PATH}}/js/main.js"></script>
 </body>
 </html>

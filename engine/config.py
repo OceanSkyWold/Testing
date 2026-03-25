@@ -43,7 +43,8 @@ EPISODIC_MEMORY_SIZE = 50     # Keep last N articles in memory
 
 # ── Publishing ──
 SITE_NAME = "TrendPulse"
-SITE_URL = os.environ.get("SITE_URL", "")  # Set after GitHub Pages setup
+SITE_URL = os.environ.get("SITE_URL", "https://oceanskywold.github.io/Testing")
+BASE_PATH = os.environ.get("BASE_PATH", "/Testing")  # GitHub Pages subpath
 GA4_MEASUREMENT_ID = os.environ.get("GA4_ID", "G-XXXXXXXXXX")
 GIT_REMOTE = os.environ.get("GIT_REMOTE", "origin")
 GIT_BRANCH = os.environ.get("GIT_BRANCH", "main")
