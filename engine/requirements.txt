@@ -1,0 +1,19 @@
+# TrendPulse Engine — Python Dependencies
+# Install: pip install -r requirements.txt
+
+# Trend discovery
+pytrends>=4.9.2        # Google Trends API
+requests>=2.31.0       # HTTP client for Reddit/HN/Wikipedia APIs
+
+# Content generation
+markdown>=3.6          # Markdown → HTML conversion
+
+# Publishing
+gitpython>=3.1.40      # Git operations from Python
+
+# Analytics (Phase 3 — install when ready)
+# google-analytics-data>=0.18.0
+# google-auth>=2.28.0
+
+# Humanizer
+numpy>=1.26.0          # Statistical analysis for burstiness/perplexity
